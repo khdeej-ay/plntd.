@@ -1,1 +1,459 @@
-/*# sourceMappingURL=style.css.map */
+/* VARIABLES */
+/* MIXINS */
+/* BASE STYLES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  background-color: #F4F5F5;
+  color: #232725;
+  margin-left: auto;
+  margin-right: auto;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+a,
+li,
+button {
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #232725;
+}
+
+.logo {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 1.5em 6%;
+  background-image: url("../assests/images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.wrapper header .logo {
+  text-shadow: 0.6px 0.6px 2.4px #1a1e1c, -0.6px -0.6px 2.4px #1a1e1c;
+  color: #F4F5F5;
+}
+.wrapper header .nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
+}
+.wrapper header .nav-links a {
+  font-size: 1.08rem;
+  color: #F1F2ED;
+  margin: 0 0.4em;
+  display: inline-block;
+  transition: 0.5s;
+}
+.wrapper header .nav-links a:hover {
+  transform: translateY(-0.18rem);
+}
+.wrapper header .nav-links .active {
+  opacity: 1;
+  text-shadow: 0.6px 0.6px 2.4px #1a1e1c, -0.6px -0.6px 2.4px #1a1e1c;
+}
+.wrapper header .nav-links .active:hover {
+  transform: translateY(0);
+}
+.wrapper header .icon {
+  color: #F4F5F5;
+  font-size: 1.5rem;
+  padding: 0em 0em 0em 3em;
+}
+.wrapper #hero {
+  padding: 1.5em 6%;
+}
+.wrapper #hero .title {
+  height: 100%;
+  padding: 12% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #F4F5F5;
+  text-align: center;
+  gap: 0.3em;
+}
+.wrapper #hero .title h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  padding: 0.09em;
+}
+.wrapper #hero .title h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  font-weight: 400;
+}
+.wrapper #hero .title .cta-btn {
+  color: #F4F5F5;
+  border: 1.5px solid #F4F5F5;
+  padding: 0.3em 0.7em 0.36em;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+  transition: all 0.4s ease 0s;
+  margin-top: 0.15em;
+  transition: all 0.3s ease;
+  font-size: 1.14rem;
+}
+.wrapper #hero .title .cta-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper #hero .title .cta-btn a {
+  color: #F4F5F5;
+}
+.wrapper #hero .title .cta-btn:hover {
+  border: 1.5px solid #F4F5F5;
+}
+.wrapper #hero .title .cta-btn:hover a {
+  font-style: italic;
+}
+
+#categories {
+  min-height: 100vh;
+  padding: 1.5em 6%;
+  background-color: #F1F2ED;
+}
+#categories .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3.6em 0em;
+  height: 100%;
+  gap: 0.5em;
+}
+#categories .container .explore {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#categories .container .explore h2 {
+  margin-top: 0.24em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  color: #232725;
+}
+#categories .container .explore .shop-btn {
+  color: #232725;
+  border: 1.5px solid #232725;
+  padding: 0.3em 0.7em 0.36em;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+  transition: all 0.4s ease 0s;
+  transition: all 0.3s ease;
+}
+#categories .container .explore .shop-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#categories .container .explore .shop-btn a {
+  color: #232725;
+}
+#categories .container .explore .shop-btn:hover {
+  border: 1.5px solid #232725;
+}
+#categories .container .explore .shop-btn:hover a {
+  font-style: italic;
+}
+#categories .container .carousel {
+  padding: 2.4em 0;
+}
+#categories .container .carousel .item {
+  width: 100%;
+  transition: all 0.5s;
+}
+#categories .container .carousel .item img {
+  inline-size: 100%;
+  aspect-ratio: 4/5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#categories .container .carousel .item h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  color: #232725;
+  font-weight: 500;
+  padding: 0.6em 0;
+}
+#categories .container .carousel .item:hover {
+  cursor: pointer;
+  transform: scale(0.96);
+}
+#categories .container .carousel .item:hover h6 {
+  color: #1a1e1c;
+  font-weight: 600;
+}
+
+#before-parallax {
+  /* The image used */
+  background-image: url("../assests/images/before-parallax.jpg");
+  /* Set a specific height */
+  min-height: 80vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about {
+  min-height: 100vh;
+  padding: 1.5em 6%;
+  height: 120vh;
+  background-color: #F1F2ED;
+}
+#about .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em;
+}
+#about .container .image {
+  width: 45%;
+  height: 99vh;
+}
+#about .container .image img {
+  height: 100%;
+  inline-size: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#about .container .gardening-info {
+  width: 100%;
+  flex: 1;
+  gap: 3em;
+  margin: 0em 0em 0em 5%;
+}
+#about .container .gardening-info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  color: #232725;
+  padding: 0.5em 0 0;
+}
+#about .container .gardening-info h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  color: #232725;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#about .container .gardening-info p {
+  padding: 1.8em 0em 1.2em;
+}
+#about .container .gardening-info .learn-more {
+  color: #232725;
+  border: 1.5px solid #232725;
+  padding: 0.3em 0.7em 0.36em;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+  transition: all 0.4s ease 0s;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#about .container .gardening-info .learn-more:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#about .container .gardening-info .learn-more .learn {
+  color: #232725;
+}
+#about .container .gardening-info .learn-more:hover {
+  border: 1.5px solid #232725;
+}
+#about .container .gardening-info .learn-more:hover a {
+  font-style: italic;
+}
+
+#after-parallax {
+  /* The image used */
+  background-image: url("../assests/images/after-parallax.jpg");
+  /* Set a specific height */
+  min-height: 84vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 6%;
+}
+#newsletter .info {
+  flex: 1;
+  gap: 0.3em;
+}
+#newsletter .info h3, #newsletter .info h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  color: #1a1e1c;
+}
+#newsletter .info h6 {
+  margin-top: 1em;
+}
+#newsletter .submit-email {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#newsletter .submit-email .email {
+  width: 100%;
+}
+#newsletter .submit-email .email .form-control {
+  color: #232725;
+  width: 100%;
+}
+#newsletter .submit-email .email .form-control:focus, #newsletter .submit-email .email .form-control:active {
+  border-radius: 0.3rem;
+  box-shadow: 0 0 2px #A2CDAD, 0 0 6px #A2CDAD;
+  outline: none;
+  border-color: none;
+}
+
+#top-btn #back-to-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 1.5em; /* Place the button at the bottom of the page */
+  right: 1.5em; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove out ne */
+  background-color: #2a982a; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 0.6em 1em; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  transition: all 0.3s ease;
+}
+#top-btn #back-to-top:hover {
+  background-color: #F2F7F2; /* Add a dark-grey background on hover */
+  color: #232725;
+}
+
+footer {
+  background-color: #33653a;
+  width: 100%;
+  margin: 0;
+}
+footer .footer-container {
+  padding: 2.4em 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-container .col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+  flex-direction: column;
+}
+footer .footer-container .col-1 .logo {
+  text-shadow: 1px 1px 1px #1a1e1c;
+  color: #F4F5F5;
+}
+footer .footer-container .col-1 .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container .col-1 .socials a {
+  font-size: 1.5rem;
+  color: #F1F2ED;
+  margin: 0 0.4em;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .footer-container .col-1 .socials a:hover {
+  transform: translateY(-0.3rem);
+}
+footer .footer-container .col-2, footer .footer-container .col-3 {
+  display: flex;
+  justify-content: center;
+  gap: 0.45em;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+footer .footer-container .col-2 h6, footer .footer-container .col-3 h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  font-size: 1.14rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+footer .footer-container .col-2 a, footer .footer-container .col-3 a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #F1F2ED;
+  display: inline-block;
+  opacity: 0.84;
+}
+footer .footer-container .col-2 a:hover, footer .footer-container .col-3 a:hover {
+  opacity: 1;
+  font-style: italic;
+  font-weight: 500;
+  text-shadow: 0.3px 0.3px 1px #1a1e1c;
+}
+footer #copyright {
+  background-color: #242926;
+  color: #F2F7F2;
+  padding: 0.6em 0.6em 0.45em;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+footer #copyright span {
+  font-weight: 400;
+  font-style: italic;
+}
+footer #copyright span a {
+  color: #F4F5F5;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+footer #copyright span a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */
