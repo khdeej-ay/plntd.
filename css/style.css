@@ -43,7 +43,7 @@ button {
 .wrapper {
   min-height: 100vh;
   padding: 1.5em 6%;
-  background-image: url("../assests/images/bg.jpg");
+  background-image: url("../assets/images/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -181,17 +181,7 @@ button {
   font-style: italic;
 }
 #categories .container .carousel {
-  padding: 2.4em 0;
-}
-#categories .container .carousel .item {
-  width: 100%;
-  transition: all 0.5s;
-}
-#categories .container .carousel .item img {
-  inline-size: 100%;
-  aspect-ratio: 4/5;
-  -o-object-fit: cover;
-     object-fit: cover;
+  padding-top: 2em;
 }
 #categories .container .carousel .item h6 {
   font-family: "Poppins", sans-serif;
@@ -199,20 +189,21 @@ button {
   color: #F4F5F5;
   color: #232725;
   font-weight: 500;
-  padding: 0.6em 0;
+}
+#categories .container .carousel .item img {
+  margin-bottom: 0.3em;
+  aspect-ratio: 4/5;
 }
 #categories .container .carousel .item:hover {
-  cursor: pointer;
   transform: scale(0.96);
 }
 #categories .container .carousel .item:hover h6 {
-  color: #1a1e1c;
   font-weight: 600;
 }
 
 #before-parallax {
   /* The image used */
-  background-image: url("../assests/images/before-parallax.jpg");
+  background-image: url("../assets/images/before-parallax.jpg");
   /* Set a specific height */
   min-height: 80vh;
   /* Create the parallax scrolling effect */
@@ -298,7 +289,7 @@ button {
 
 #after-parallax {
   /* The image used */
-  background-image: url("../assests/images/after-parallax.jpg");
+  background-image: url("../assets/images/after-parallax.jpg");
   /* Set a specific height */
   min-height: 84vh;
   /* Create the parallax scrolling effect */
