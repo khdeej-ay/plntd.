@@ -1,0 +1,73 @@
+/* MIXINS */
+
+@mixin sectionStyle() {
+    min-height: 100vh;
+    padding: 1.5em 6%;
+}
+
+@mixin logoStyle() {
+    font-family: $logo-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@mixin headingStyle() {
+    font-family: $heading-font;
+    font-weight: 600;
+    color: $body-color;
+}
+
+@mixin iconStyle() {
+    color: $body-color;
+    font-size: 1.5rem;
+}
+
+@mixin btnStyle() {
+    color: $body-color; 
+    border: 1.5px solid $body-color;
+    padding: 0.3em 0.7em 0.36em;
+    text-transform: uppercase;
+    letter-spacing: 2.1px;
+    transition: all 0.4s ease 0s;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+@mixin btnStyleAlt() {
+    color: $text-color; 
+    border: 1.5px solid $text-color;
+    padding: 0.3em 0.7em 0.36em;
+    text-transform: uppercase;
+    letter-spacing: 2.1px;
+    transition: all 0.4s ease 0s;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+@mixin marginCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexJustifySB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexJustifyC {
+    display: flex;
+    justify-content: center;
+}
