@@ -1,1 +1,270 @@
-/*# sourceMappingURL=contact.css.map */
+/* VARIABLES */
+/* MIXINS */
+/* BASE STYLES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  background-color: #F4F5F5;
+  color: #232725;
+  margin-left: auto;
+  margin-right: auto;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+a,
+li,
+button {
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #232725;
+}
+
+.logo {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 1.5em 6%;
+  padding: 1em 6%;
+}
+.wrapper nav .logo {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1e1c;
+}
+.wrapper nav .nav-item a {
+  transition: 0.5s;
+}
+.wrapper nav .nav-item a:hover {
+  transform: translateY(-0.18rem);
+}
+.wrapper nav .nav-item .active {
+  opacity: 1;
+}
+.wrapper nav .nav-item .active:hover {
+  transform: translateY(0);
+}
+.wrapper nav .icon i {
+  border-radius: 50%;
+  padding: 0.018em 0.24em 0em 0.24em;
+  transition: all 0.24s ease-in-out;
+  cursor: pointer;
+}
+.wrapper nav .icon i:hover {
+  color: #F1F2ED;
+  background-color: #232725;
+}
+.wrapper #header .contact-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper #header .contact-hero .text-content h5, .wrapper #header .contact-hero .text-content h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  color: #1a1e1c;
+  font-weight: 500;
+}
+.wrapper #header .contact-hero .text-content .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6em;
+}
+.wrapper #header .contact-hero .text-content .icons i {
+  padding: 0.66em;
+  border-radius: 50%;
+  border: 1.2px solid #232725;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.wrapper #header .contact-hero .text-content .icons i:hover {
+  color: #F4F5F5;
+  background-color: #232725;
+}
+.wrapper #header .contact-hero .text-content .icons .pin {
+  padding: 0.66em 0.75rem;
+  border-radius: 50%;
+  border: 1.2px solid #232725;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.wrapper #header .contact-hero .text-content .icons .pin:hover {
+  color: #F4F5F5;
+  background-color: #232725;
+}
+.wrapper #header .contact-hero .video-container video {
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0.75rem 0.75rem 0 #33653a;
+}
+
+main {
+  padding: 4.5em 6%;
+  margin-bottom: 1.5em;
+}
+main .container-lg .image {
+  height: 72vh;
+  width: 48%;
+}
+main .container-lg .image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: -0.75rem 0.75rem 0 #33653a;
+}
+main .container-lg .contact h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  text-decoration: underline;
+  padding: 0.3em 0;
+  color: #1a1e1c;
+  font-weight: 500;
+}
+main .container-lg .contact form .form-control:focus {
+  border-radius: 0.3rem;
+  box-shadow: 0 0 2px #A2CDAD, 0 0 6px #A2CDAD;
+  outline: none;
+  border: none;
+}
+main .container-lg .contact form .form-control:active {
+  border-radius: 0.3rem;
+  box-shadow: 0 0 6px #A2CDAD;
+  outline: none;
+  border: none;
+}
+
+#top-btn #back-to-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 1.5em; /* Place the button at the bottom of the page */
+  right: 1.5em; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove out ne */
+  background-color: #2a982a; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 0.6em 1em; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  transition: all 0.3s ease;
+}
+#top-btn #back-to-top:hover {
+  background-color: #232725; /* Add a dark-grey background on hover */
+}
+
+footer {
+  background-color: #33653a;
+  width: 100%;
+  margin: 0;
+}
+footer .footer-container {
+  padding: 2.4em 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-container .col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+  flex-direction: column;
+}
+footer .footer-container .col-1 .logo {
+  text-shadow: 1px 1px 1px #1a1e1c;
+  color: #F4F5F5;
+}
+footer .footer-container .col-1 .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container .col-1 .socials a {
+  font-size: 1.5rem;
+  color: #F1F2ED;
+  margin: 0 0.4em;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .footer-container .col-1 .socials a:hover {
+  transform: translateY(-0.3rem);
+}
+footer .footer-container .col-2, footer .footer-container .col-3 {
+  display: flex;
+  justify-content: center;
+  gap: 0.45em;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+footer .footer-container .col-2 h6, footer .footer-container .col-3 h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  font-size: 1.14rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+footer .footer-container .col-2 a, footer .footer-container .col-3 a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #F1F2ED;
+  display: inline-block;
+  opacity: 0.84;
+}
+footer .footer-container .col-2 a:hover, footer .footer-container .col-3 a:hover {
+  opacity: 1;
+  font-style: italic;
+  font-weight: 500;
+  text-shadow: 0.3px 0.3px 1px #1a1e1c;
+}
+footer #copyright {
+  background-color: #242926;
+  color: #F2F7F2;
+  padding: 0.6em 0.6em 0.45em;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+footer #copyright span {
+  font-weight: 400;
+  font-style: italic;
+}
+footer #copyright span a {
+  color: #F4F5F5;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+footer #copyright span a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}/*# sourceMappingURL=contact.css.map */
