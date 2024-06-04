@@ -1,0 +1,355 @@
+@import "_variables";
+@import "_mixins";
+@import "_base";
+
+.wrapper {
+    @include sectionStyle(); 
+    padding: 1em 6%;
+
+    nav {
+
+        .logo {
+            @include logoStyle();
+            color: $heading-color;
+        }
+
+        .nav-item {
+
+            a {
+                opacity: 0.6;
+                transition: 0.5s;
+                
+                &:hover {
+                    transform: translateY(-0.18rem);
+                }
+            }
+
+            .active {
+                opacity: 1;
+    
+                &:hover {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .icon {
+
+            i {
+                border-radius: 50%;
+                padding: 0.018em 0.24em 0em 0.24em;
+                transition: all 0.24s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    color: #F1F2ED;
+                    background-color: $text-color;
+                }
+            }
+        }
+    }
+
+    #header {
+
+        .text-content {
+            @include flexJustifyC();
+            flex-direction: column;
+
+            h1 {
+                margin-bottom: 0.45em;
+                @include headingStyle();
+                color: $heading-color;
+                font-weight: 500;
+            }
+
+            p {
+                margin-bottom: 1.5em;
+                font-size: 1rem;
+            }
+
+            button {
+                @include btnStyleAlt();
+                width: fit-content;
+                box-shadow: 0 0 1px #424242;
+                font-size: 1.14rem;
+                transition: all 0.3s ease;
+
+                
+                a {
+                    color: $text-color; 
+                }
+
+                &:hover {
+                    box-shadow: 0 0 2px #363636;
+                    background-color: $text-color;
+                    
+                    a {
+                        color: #F1F2ED;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+        .video-container {
+                
+            video {
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                aspect-ratio: 3 / 2;
+                object-fit: cover;
+                border: 0.06px solid $primary-color;
+                box-shadow: 0.75rem 0.75rem 0 $primary-color;
+            }
+        }
+    }
+}
+
+#categories {
+    @include sectionStyle();
+    height: auto;
+    background-color: #F1F2ED;
+
+    .container {
+        @include flexCenter();
+        flex-direction: column;
+        padding: 3.6em 0em;
+        height: 100%;
+        gap: 0.5em;
+
+        h2 {
+            text-decoration: underline;
+            margin-top: 0.3em;
+            @include headingStyle();
+            color: $text-color;
+        }
+
+        .carousel {
+            padding-top: 2em;
+            
+            .item {
+
+                h6 {
+                    @include headingStyle();
+                    color: $text-color;
+                    font-weight: 500;
+                }
+
+                img {
+                    height: 100%;
+                    inline-size: 100%; 
+                    object-fit: cover;
+                    margin-bottom: 0.3em;
+                    aspect-ratio: 4 / 5;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(0.96);
+
+                    h6 {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#parallax {
+
+    .shop-parallax {
+
+        /* The image used */
+        background-image: url("../assets/images/shop-parallax.jpg");
+       
+        /* Set a specific height */
+        min-height: 80vh; 
+        
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+   }
+}
+
+#bestsellers {
+    padding: 3em 6% 4.5em;
+
+    .row {
+        gap: 1em;
+
+        h2 {
+            @include headingStyle();
+            color: $heading-color;
+            padding: 1em 0.75em 1.2em;
+        }
+
+        .plant {
+            border: 1px solid #b1b1b1;
+            border-radius: 0.6em;
+            padding: 1em 1em 0em;
+            transition: all 0.3s ease;
+
+            img {
+                inline-size: 100%;
+                aspect-ratio: 4 / 5;
+                object-fit: cover;
+            }
+
+            .details {
+                @include flexJustifySB();
+                @include headingStyle();
+                font-weight: 400;
+                color: #545454;
+                padding: 0.6em 0 0;
+                margin: 0;
+
+                p {
+                    font-size: 0.96rem;
+                }
+
+                .product {
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+
+                &:hover {
+                    color: #202422;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.02);
+                box-shadow: 2px 2px 6px #00000024;
+            }
+        }
+
+        .more {
+
+            a {
+                color: $body-color;
+            }
+        }
+    }
+}
+
+// BACK-TO-TOP BTN
+#top-btn {
+    #back-to-top {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 1.5em; /* Place the button at the bottom of the page */
+        right: 1.5em; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove out ne */
+        background-color: #2a982a; /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 0.6em 1em; /* Some padding */
+        border-radius: 50%; /* Rounded corners */
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $primary-color-white; /* Add a dark-grey background on hover */
+          color: $text-color;
+        }
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    width: 100%;
+    margin: 0;
+    
+    .footer-container {
+        padding: 2.4em 10%;
+        @include flexJustifySB();
+
+        .col-1 {
+            @include flexCenter();
+            gap: 1.2em;
+            flex-direction: column;
+
+            .logo {
+                text-shadow: 1px 1px 1px $heading-color;
+                color: $body-color;
+            }
+
+            .socials {
+                @include flexCenter();
+
+                a {
+                    font-size: 1.5rem;
+                    color: #F1F2ED;
+                    margin: 0 0.4em;
+                    display: inline-block;
+                    transition: 0.5s;
+
+                    &:hover {
+                        transform: translateY(-0.3rem);
+                    }
+                }
+            }
+        }
+
+        .col-2, .col-3 {
+            @include flexJustifyC();
+            gap: 0.45em;
+            flex-direction: column;
+            transition: all 0.3s;
+
+            h6 {
+                @include headingStyle();
+                font-size: 1.14rem;
+                font-weight: 500;
+                text-decoration: underline;
+            }
+
+            a {
+                font-size: 1rem;
+                font-weight: 400;
+                color: #F1F2ED;
+                display: inline-block;
+                opacity: 0.84;
+
+                &:hover {
+                    opacity: 1;
+                    font-style: italic;
+                    font-weight: 500;
+                    text-shadow: 0.3px 0.3px 1px $heading-color;
+                }
+            }
+        }
+    }
+    
+    #copyright {
+        background-color: $bg-dark;
+        color: $primary-color-white;
+        padding: 0.6em 0.6em 0.45em;
+        text-align: center;
+        font-family: $heading-font;
+        font-size: 0.9rem;
+        font-weight: 400;
+
+        span {
+            font-weight: 400;
+            font-style: italic;
+            
+            a {
+                color: $body-color;
+                opacity: 0.75;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    text-decoration: underline;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
