@@ -1,0 +1,394 @@
+/* VARIABLES */
+/* MIXINS */
+/* BASE STYLES */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    background-color: #F4F5F5;
+    color: #232725;
+    margin-left: auto;
+    margin-right: auto;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+  
+a,
+li,
+button {
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #232725;
+}
+  
+.wrapper {
+    padding: 1.5em 6%;
+    padding: 1em 6% 0;
+}
+.wrapper nav .logo {
+    font-family: "Martian Mono", monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1e1c;
+}
+
+.wrapper nav .nav-item a {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.wrapper nav .nav-item a:hover {
+    transform: translateY(-0.18rem);
+}
+.wrapper nav .nav-item .active {
+    opacity: 1;
+}
+.wrapper nav .nav-item .active:hover {
+    transform: translateY(0);
+}
+.wrapper nav .icon i {
+    border-radius: 50%;
+    padding: 0.018em 0.24em 0em 0.24em;
+    transition: all 0.24s ease-in-out;
+    cursor: pointer;
+}
+.wrapper nav .icon i:hover {
+    color: #F1F2ED;
+    background-color: #232725;
+}
+
+.product-wrap {
+    height: 105vh;
+	padding: 3em 6%;
+	font-family: 'Poppins', sans-serif;
+}
+
+.heading-section {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.sub-heading {
+	font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    display: block;
+    font-weight: 600;
+    color: #2e9ca1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.heading-section h2 {
+	font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 15px;
+	font-family: 'Poppins', sans-serif;
+}
+.name {
+	margin-bottom: 0;
+    line-height: 14px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.product-name {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 22px;
+	margin-bottom: 4px;
+}
+.product-price-discount {
+	font-size: 22px;
+    font-weight: 400;
+    padding: 10px 0;
+    clear: both;
+}
+.product-price-discount span.line-through {
+	text-decoration: line-through;
+    margin-left: 10px;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #a5a5a5;
+}
+.display-flex {
+	display: flex;
+}
+.align-center {
+	align-items: center;
+}
+.product-info {
+	width: 100%;
+}
+.reviews-counter {
+    font-size: 13px;
+}
+.reviews-counter span {
+	vertical-align: -2px;
+}
+.rate {
+    float: left;
+    padding: 0 10px 0 0;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float: right;
+    width: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 21px;
+    color:#ccc;
+	margin-bottom: 0;
+	line-height: 21px;
+}
+.rate:not(:checked) > label:before {
+    content: '\2605';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+.product-dtl p {
+	font-size: 14px;
+	line-height: 24px;
+	color: #7a7a7a;
+}
+.product-dtl .form-control {
+	font-size: 15px;
+}
+.product-dtl label {
+	line-height: 16px;
+	font-size: 15px;
+}
+.form-control:focus {
+	outline: none;
+	box-shadow: none;
+}
+.product-count {
+	margin-top: 15px; 
+}
+.product-count .qtyminus,
+.product-count .qtyplus {
+	width: 34px;
+    height: 34px;
+    background: #212529;
+    text-align: center;
+    font-size: 19px;
+    line-height: 36px;
+    color: #fff;
+    cursor: pointer;
+}
+.product-count .qtyminus {
+	border-radius: 3px 0 0 3px; 
+}
+.product-count .qtyplus {
+	border-radius: 0 3px 3px 0; 
+}
+.product-count .qty {
+	width: 60px;
+	text-align: center;
+}
+.round-black-btn {
+	border-radius: 4px;
+    background: #212529;
+    color: #fff;
+    padding: 7px 45px;
+    display: inline-block;
+    margin-top: 20px;
+    border: solid 2px #212529; 
+    transition: all 0.5s ease-in-out 0s;
+}
+.round-black-btn:hover,
+.round-black-btn:focus {
+	background: transparent;
+	color: #212529;
+	text-decoration: none;
+}
+
+.product-info-tabs {
+	margin-top: 25px; 
+}
+.product-info-tabs .nav-tabs {
+	border-bottom: 2px solid #d8d8d8;
+}
+.product-info-tabs .nav-tabs .nav-item {
+	margin-bottom: 0;
+}
+.product-info-tabs .nav-tabs .nav-link {
+	border: none; 
+	border-bottom: 2px solid transparent;
+	color: #323232;
+}
+.product-info-tabs .nav-tabs .nav-item .nav-link:hover {
+	border: none; 
+}
+.product-info-tabs .nav-tabs .nav-item.show .nav-link, 
+.product-info-tabs .nav-tabs .nav-link.active, 
+.product-info-tabs .nav-tabs .nav-link.active:hover {
+	border: none; 
+	border-bottom: 2px solid #d8d8d8;
+	font-weight: bold;
+}
+.product-info-tabs .tab-content .tab-pane {
+	padding: 30px 20px;
+	font-size: 15px;
+	line-height: 24px;
+	color: #7a7a7a;
+}
+.review-form .form-group {
+	clear: both;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.review-form .rate {
+	float: none;
+	display: inline-block;
+}
+.review-heading {
+	font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    color: #000;
+}
+.review-form .form-control {
+	font-size: 14px;
+}
+.review-form input.form-control {
+	height: 40px;
+}
+.review-form textarea.form-control {
+	resize: none;
+}
+.review-form .round-black-btn {
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#top-btn #back-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 1.5em; /* Place the button at the bottom of the page */
+    right: 1.5em; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove out ne */
+    background-color: #2a982a; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0.6em 1em; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    transition: all 0.3s ease;
+}
+#top-btn #back-to-top:hover {
+    background-color: #F2F7F2; /* Add a dark-grey background on hover */
+    color: #232725;
+}
+  
+footer {
+    background-color: #33653a;
+    width: 100%;
+    margin: 0;
+}
+footer .footer-container {
+    padding: 2.4em 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-container .col-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    flex-direction: column;
+}
+footer .footer-container .col-1 .logo {
+    text-shadow: 1px 1px 1px #1a1e1c;
+    color: #F4F5F5;
+}
+footer .footer-container .col-1 .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-container .col-1 .socials a {
+    font-size: 1.5rem;
+    color: #F1F2ED;
+    margin: 0 0.4em;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .footer-container .col-1 .socials a:hover {
+    transform: translateY(-0.3rem);
+}
+footer .footer-container .col-2, footer .footer-container .col-3 {
+    display: flex;
+    justify-content: center;
+    gap: 0.45em;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+footer .footer-container .col-2 h6, footer .footer-container .col-3 h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #F4F5F5;
+    font-size: 1.14rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+footer .footer-container .col-2 a, footer .footer-container .col-3 a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #F1F2ED;
+    display: inline-block;
+    opacity: 0.84;
+}
+footer .footer-container .col-2 a:hover, footer .footer-container .col-3 a:hover {
+    opacity: 1;
+    font-style: italic;
+    font-weight: 500;
+    text-shadow: 0.3px 0.3px 1px #1a1e1c;
+}
+footer #copyright {
+    background-color: #242926;
+    color: #F2F7F2;
+    padding: 0.6em 0.6em 0.45em;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+footer #copyright span {
+    font-weight: 400;
+    font-style: italic;
+}
+footer #copyright span a {
+    color: #F4F5F5;
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+footer #copyright span a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
