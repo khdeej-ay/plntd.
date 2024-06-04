@@ -4,7 +4,7 @@
 
 .wrapper {
     @include sectionStyle();
-    background-image: url("../assests/images/bg.jpg");
+    background-image: url("../assets/images/bg.jpg");
     background-size: cover;                      
     background-repeat: no-repeat;
     background-position: center center;
@@ -130,33 +130,27 @@
                 }
             }
         }
-        
+
         .carousel {
-            padding: 2.4em 0;
-
+            padding-top: 2em;
+            
             .item {
-                width: 100%;
-                transition: all 0.5s;
-
-                img {
-                    inline-size: 100%;
-                    aspect-ratio: 4 / 5;
-                    object-fit: cover;
-                }
 
                 h6 {
                     @include headingStyle();
                     color: $text-color;
                     font-weight: 500;
-                    padding: 0.6em 0;
+                }
+
+                img {
+                    margin-bottom: 0.3em;
+                    aspect-ratio: 4 / 5;
                 }
 
                 &:hover {
-                    cursor: pointer;
                     transform: scale(0.96);
 
                     h6 {
-                        color: $heading-color;
                         font-weight: 600;
                     }
                 }
@@ -168,7 +162,7 @@
 #before-parallax {
 
     /* The image used */
-    background-image: url("../assests/images/before-parallax.jpg");
+    background-image: url("../assets/images/before-parallax.jpg");
     
     /* Set a specific height */
     min-height: 80vh; 
@@ -250,7 +244,7 @@
 #after-parallax {
 
     /* The image used */
-    background-image: url("../assests/images/after-parallax.jpg");
+    background-image: url("../assets/images/after-parallax.jpg");
     
     /* Set a specific height */
     min-height: 84vh; 
