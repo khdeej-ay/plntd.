@@ -1,1 +1,293 @@
-/*# sourceMappingURL=faqs.css.map */
+/* VARIABLES */
+/* MIXINS */
+/* BASE STYLES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  background-color: #F4F5F5;
+  color: #232725;
+  margin-left: auto;
+  margin-right: auto;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+a,
+li,
+button {
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #232725;
+}
+
+.logo {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 1.5em 6%;
+  padding: 1em 6%;
+}
+.wrapper nav .logo {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1e1c;
+}
+.wrapper nav .nav-item a {
+  transition: 0.5s;
+}
+.wrapper nav .nav-item a:hover {
+  transform: translateY(-0.18rem);
+}
+.wrapper nav .nav-item .active {
+  opacity: 1;
+}
+.wrapper nav .nav-item .active:hover {
+  transform: translateY(0);
+}
+.wrapper nav .icon i {
+  border-radius: 50%;
+  padding: 0.018em 0.24em 0em 0.24em;
+  transition: all 0.24s ease-in-out;
+  cursor: pointer;
+}
+.wrapper nav .icon i:hover {
+  color: #F1F2ED;
+  background-color: #232725;
+}
+.wrapper #header .faqs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper #header .faqs .text-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper #header .faqs .text-content h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  color: #1a1e1c;
+  font-weight: 500;
+}
+.wrapper #header .faqs .text-content h1 {
+  margin-bottom: 0.45em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  color: #1a1e1c;
+  font-weight: 500;
+}
+.wrapper #header .faqs .text-content p {
+  margin-bottom: 1.5em;
+  font-size: 1rem;
+}
+.wrapper #header .faqs .text-content button {
+  color: #232725;
+  border: 1.5px solid #232725;
+  padding: 0.3em 0.7em 0.36em;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+  transition: all 0.4s ease 0s;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: 0 0 1px #424242;
+  font-size: 1.14rem;
+  transition: all 0.3s ease;
+}
+.wrapper #header .faqs .text-content button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper #header .faqs .text-content button a {
+  color: #232725;
+}
+.wrapper #header .faqs .text-content button:hover {
+  box-shadow: 0 0 2px #363636;
+  background-color: #232725;
+}
+.wrapper #header .faqs .text-content button:hover a {
+  color: #F1F2ED;
+  font-style: italic;
+}
+.wrapper #header .faqs .header-image img {
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0.75rem 0.75rem 0 #33653a;
+  transition: all 0.3s ease;
+}
+.wrapper #header .faqs .header-image img:hover {
+  cursor: pointer;
+  transform: translate(0.3rem, 0.3rem);
+}
+
+#shipping,
+#plant-care,
+#refunds {
+  padding: 3.6em 0 2.4em;
+}
+#shipping .text-center,
+#plant-care .text-center,
+#refunds .text-center {
+  text-decoration: underline;
+  margin-bottom: 3em;
+}
+#shipping .faqs,
+#plant-care .faqs,
+#refunds .faqs {
+  padding-top: 1em;
+}
+#shipping .faqs .accordion-button:first-of-type:not(.collapsed),
+#plant-care .faqs .accordion-button:first-of-type:not(.collapsed),
+#refunds .faqs .accordion-button:first-of-type:not(.collapsed) {
+  background-color: #36853C;
+  color: #F1F2ED;
+}
+#shipping .faqs .accordion-button:active,
+#plant-care .faqs .accordion-button:active,
+#refunds .faqs .accordion-button:active {
+  background-color: #36853C;
+  color: #F1F2ED;
+  box-shadow: none;
+}
+#shipping .faqs .accordion-button:focus,
+#plant-care .faqs .accordion-button:focus,
+#refunds .faqs .accordion-button:focus {
+  background-color: #36853C;
+  color: #F1F2ED;
+  box-shadow: 0 0 2px #A2CDAD;
+  border: 2.4px solid #A2CDAD;
+}
+
+#top-btn #back-to-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 1.5em; /* Place the button at the bottom of the page */
+  right: 1.5em; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove out ne */
+  background-color: #2a982a; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 0.6em 1em; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  transition: all 0.3s ease;
+}
+#top-btn #back-to-top:hover {
+  background-color: #F2F7F2; /* Add a dark-grey background on hover */
+  color: #232725;
+}
+
+footer {
+  background-color: #33653a;
+  width: 100%;
+  margin: 0;
+}
+footer .footer-container {
+  padding: 2.4em 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-container .col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+  flex-direction: column;
+}
+footer .footer-container .col-1 .logo {
+  text-shadow: 1px 1px 1px #1a1e1c;
+  color: #F4F5F5;
+}
+footer .footer-container .col-1 .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container .col-1 .socials a {
+  font-size: 1.5rem;
+  color: #F1F2ED;
+  margin: 0 0.4em;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .footer-container .col-1 .socials a:hover {
+  transform: translateY(-0.3rem);
+}
+footer .footer-container .col-2, footer .footer-container .col-3 {
+  display: flex;
+  justify-content: center;
+  gap: 0.45em;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+footer .footer-container .col-2 h6, footer .footer-container .col-3 h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #F4F5F5;
+  font-size: 1.14rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+footer .footer-container .col-2 a, footer .footer-container .col-3 a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #F1F2ED;
+  display: inline-block;
+  opacity: 0.84;
+}
+footer .footer-container .col-2 a:hover, footer .footer-container .col-3 a:hover {
+  opacity: 1;
+  font-style: italic;
+  font-weight: 500;
+  text-shadow: 0.3px 0.3px 1px #1a1e1c;
+}
+footer #copyright {
+  background-color: #242926;
+  color: #F2F7F2;
+  padding: 0.6em 0.6em 0.45em;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+footer #copyright span {
+  font-weight: 400;
+  font-style: italic;
+}
+footer #copyright span a {
+  color: #F4F5F5;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+footer #copyright span a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}/*# sourceMappingURL=faqs.css.map */
