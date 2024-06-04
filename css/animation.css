@@ -24,7 +24,8 @@ footer > * > * > * > * {
 .shop-btn a, 
 #hero .title .cta-btn a, 
 #bestsellers .plant .details p, 
-#bestsellers .more a {
+#bestsellers .more a, 
+.plant {
     animation: none;
 }
 
