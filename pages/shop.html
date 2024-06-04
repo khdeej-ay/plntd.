@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaf Favicon -->
+    <link rel="icon" href="../favicon.svg" type="image/x-icon">
+
+    <!-- Loads fonts faster -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts used: Martian Mono, Poppins, and Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Title of the page -->
+    <title>Plntd. | Shop</title>
+    
+    <!-- Link to Font Awesome icons  brary -->
+    <script src="https://kit.fontawesome.com/2817ef6741.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Bootstrap CDN CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Owl Carousel 2 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="../css/shop.css">
+
+    <!-- Link to Vanilla CSS Animation stylesheet -->
+    <link rel="stylesheet" href="../css/animation.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <!-- NAVIGATION MENU -->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-xxl g-0">
+            
+                <!-- Logo -->
+                <a href="../index.html" class="navbar-brand logo">
+                    <span class="text-dark">
+                        plntd.
+                    </span>
+                </a>
+
+                <!-- TOGGLE MENU - FOR SMALL SCREENS -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle Menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Nav Links -->
+                <div class="collapse navbar-collapse justify-content-end align-center" id="navLinks">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html" class="nav-link active" aria-current="page">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="faqs.html" class="nav-link">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand ms-5 d-none d-md-inline icon" href="account.html">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <hr>
+
+        <section id="header" class="flex-container pt-5 mt-4">
+            <div class="container-lg">
+                <div class="row justify-content-evenly align-items-center gap-3">
+                    <div class="text-content col-md-5 text-start">
+                        <h1>Plants Make People Happy</h1>
+                        <p>Explore our diverse selection of vibrant plants and find the perfect greenery to bring joy and tranquility to your home. Whether you're a seasoned plant enthusiast or just starting your green journey, we have everything you need to create your own indoor oasis.</p>
+                        <button class="shop-btn">
+                            <a href="shop.html">Shop Now</a>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="video-container">
+                            <video autoplay muted loop>
+                                <source src="../assets/videos/plant-loop.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="categories">
+        <div class="container">
+            <h2>Categories</h2>
+            <div class="carousel owl-carousel owl-theme">
+                <div class="item">
+                    <img src="../assets/images/indoor-plants.jpg" alt="an unkillable plant next to a chair">
+                    <h6>Indoor Plants</h6>
+                </div>
+                <div class="item">
+                    <img src="../assets/images/window.jpg" alt="flowers outside a window">
+                    <h6>Outdoor Plants</h6>
+                </div>
+                <div class="item">
+                    <img src="../assets/images/table-plants.jpg" alt="plants lined up on a table">
+                    <h6>Plant Care</h6>
+                </div>
+                <div class="item">
+                    <img src="../assets/images/shelf-plants.jpg" alt="an exotic plant called swiss cheese plant">
+                    <h6>Specialty Plants</h6>
+                </div>
+                <div class="item">
+                    <img src="../assets/images/plant-bundle.jpg" alt="plants lined up on a table">
+                    <h6>Plant Bundles</h6>
+                </div>
+                <div class="item">
+                    <img src="../assets/images/home-decor.jpg" alt="plants decorated in a home">
+                    <h6>Home Decor</h6>
+                </div>
+                <div class="item">
+                    <img src="../assets/images/watering-can.jpg" alt="watering can next to some plants on a table">
+                    <h6>Accessories</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="parallax">
+        <div class="shop-parallax"></div>
+    </section>
+
+    <section id="bestsellers">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center">
+                <h2>Most Popular</h2>
+            </div>
+            <div class="row justify-content-evenly align-items-center g-4">
+                <div class="row justify-content-center align-items-center">
+                    <a class="col plant" href="product.html">
+                        <img src="../assets/images/peace-lily.webp" alt="a peace lily plant">
+                        <div class="details">
+                            <p class="product">Peace Lily</p>
+                            <p>AED 49</p>
+                        </div>
+                    </a>
+                    <div class="col plant">
+                        <img src="../assets/images/money-tree.webp" alt="a money tree plant">
+                        <div class="details">
+                            <p class="product">Money Tree</p>
+                            <p>AED 79</p>
+                        </div>
+                    </div>
+                    <div class="col plant">
+                        <img src="../assets/images/areca palm.webp" alt="an areca palm">
+                        <div class="details">
+                            <p class="product">Areca Plam</p>
+                            <p>AED 49</p>
+                        </div>
+                    </div>
+                    <div class="col plant">
+                        <img src="../assets/images/queens-set.webp" alt="a queen's set plant">
+                        <div class="details">
+                            <p class="product">Queen's Set</p>
+                            <p>AED 59</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col plant">
+                        <img src="../assets/images/rubber-tree.webp" alt="a rubber tree plant">
+                        <div class="details">
+                            <p class="product">Rubber Tree</p>
+                            <p>AED 59</p>
+                        </div>
+                    </div>
+                    <div class="col plant">
+                        <img src="../assets/images/birds-of-paradise.webp" alt="birds of paradise plant">
+                        <div class="details">
+                            <p class="product">Birds of Paradise</p>
+                            <p>AED 89</p>
+                        </div>
+                    </div>
+                    <div class="col plant">
+                        <img src="../assets/images/beginner-set.webp" alt="beginner set of plants">
+                        <div class="details">
+                            <p class="product">Beginner Set</p>
+                            <p>AED 119</p>
+                        </div>
+                    </div>
+                    <div class="col plant">
+                        <img src="../assets/images/swiss-cheese-plant.webp" alt="a swiss cheese plant">
+                        <div class="details">
+                            <p class="product">Swiss Cheese Plant</p>
+                            <p>AED 179</p>  
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <button type="button" class="btn btn-dark py-2 px-3 mt-2 my-2 more">
+                        <a href="https://plntd.ae/collections/most-popular-plants" target="_blank">
+                            Browse More
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- BACK-TO-TOP BUTTON -->
+    <section id="top-btn">
+        <button onclick="topFunction()" id="back-to-top" title="Go to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="col-1">
+                <a id="logo" class="logo" href="#">plntd.</a>
+                <div class="socials">
+                    <a class="insta">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                    <a class="x-twitter">
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                    </a>
+                    <a class="pinterest">
+                        <i class="fa-brands fa-square-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-2">
+                <h6>Quick Links</h6>
+                <a href="shop.html">Shop</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="col-3">
+                <h6>Our Terms</h6>
+                <a href="#">Refund Policy</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        
+        <!-- COPYRIGHT -->
+        <div id="copyright">
+            Made by Syeda Khadeeja.
+            <br>
+            &copy; 2024 <span><a href="https://plntd.ae/" target="_blank">Plntd.</a></span> | All Rights Reserved.
+        </div>
+    </footer>
+    
+    <!-- Bootstrap CDN JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Owl Carousel 2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Link to external scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/owl-carousel.js"></script>
+
+</body>
+</html>
