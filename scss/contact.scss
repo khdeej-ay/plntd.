@@ -2,20 +2,26 @@
 @import "_mixins";
 @import "_base";
 
+// style wrapper
 .wrapper {
+    // styles section
     @include sectionStyle(); 
     padding: 1em 6%;
 
+    // styles navbar
     nav {
 
         .logo {
             @include logoStyle();
+            // sets color
             color: $heading-color;
         }
 
         .nav-item {
 
+            // styles anchor tags
             a {
+                // sets a transition
                 transition: 0.5s;
                 
                 &:hover {
@@ -23,6 +29,7 @@
                 }
             }
 
+            // targets active nav tab
             .active {
                 opacity: 1;
     
@@ -32,22 +39,27 @@
             }
         }
 
+        // styles nav icon
         .icon {
 
             i {
                 border-radius: 50%;
                 padding: 0.018em 0.24em 0em 0.24em;
+                // sets a transition
                 transition: all 0.24s ease-in-out;
                 cursor: pointer;
 
                 &:hover {
+                    // sets color
                     color: #F1F2ED;
+                    // sets background color 
                     background-color: $text-color;
                 }
             }
         }
     }
 
+    // styles the header 
     #header {
         
         .contact-hero {
@@ -57,10 +69,12 @@
 
                 h5, h1 {
                     @include headingStyle();
+                    // sets color
                     color: $heading-color;
                     font-weight: 500;
                 }
 
+                // styles contact icons
                 .icons {
                     // padding: 0.45em 0;
                     @include flexCenter();
@@ -71,11 +85,14 @@
                         padding: 0.66em;
                         border-radius: 50%;
                         border: 1.2px solid $text-color;
+                        // sets a transition
                         transition: all 0.3s ease;
                         cursor: pointer;
 
                         &:hover {
+                            // sets color
                             color: $body-color;
+                            // sets background color 
                             background-color: $text-color;
                         }
                     }
@@ -84,11 +101,14 @@
                         padding: 0.66em 0.75rem;
                         border-radius: 50%;
                         border: 1.2px solid $text-color;
+                        // sets a transition
                         transition: all 0.3s ease;
                         cursor: pointer;
 
                         &:hover {
+                            // sets color
                             color: $body-color;
+                            // sets background color 
                             background-color: $text-color;
                         }
                     }
@@ -98,8 +118,10 @@
             .video-container {
                 
                 video {
+                    // sets width
                     width: 100%;
                     height: 100%;
+                    // positions image to the bottom of the container
                     background-position: bottom;
                     aspect-ratio: 3 / 2;
                     object-fit: cover;
@@ -118,9 +140,11 @@ main {
 
         .image {
             height: 72vh;
+            // sets width
             width: 48%;
             
             img {
+                // sets width
                 width: 100%;
                 height: 100%;
                 aspect-ratio: 2 / 3;
@@ -134,6 +158,7 @@ main {
                 @include headingStyle();
                 text-decoration: underline;
                 padding: 0.3em 0;
+                // sets color
                 color: $heading-color;
                 font-weight: 500;
             }
@@ -164,34 +189,42 @@ main {
 // BACK-TO-TOP BTN
 #top-btn {
     #back-to-top {
-        display: none; /* Hidden by default */
+        // sets display
+        display: none; 
         position: fixed; /* Fixed/sticky position */
         bottom: 1.5em; /* Place the button at the bottom of the page */
         right: 1.5em; /* Place the button 30px from the right */
         z-index: 99; /* Make sure it does not overlap */
         border: none; /* Remove borders */
         outline: none; /* Remove out ne */
-        background-color: #2a982a; /* Set a background color */
-        color: white; /* Text color */
+        // sets background color 
+        background-color: #2a982a; 
+        // sets color
+        color: white; 
         cursor: pointer; /* Add a mouse pointer on hover */
         padding: 0.6em 1em; /* Some padding */
         border-radius: 50%; /* Rounded corners */
+        // sets a transition
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: $text-color; /* Add a dark-grey background on hover */
-        //   color: $text-color;
+            // sets background color 
+          background-color: $text-color; 
         }
     }
 }
 
+// styles footer
 footer {
     background-color: $primary-color;
+    // sets width
     width: 100%;
+    // sets margins
     margin: 0;
     
     .footer-container {
         padding: 2.4em 10%;
+        // sets display to flex, aligns content to center, and justifies content to space between
         @include flexJustifySB();
 
         .col-1 {
@@ -200,18 +233,26 @@ footer {
             flex-direction: column;
 
             .logo {
+                // adds a text shadow
                 text-shadow: 1px 1px 1px $heading-color;
+                // sets color
                 color: $body-color;
             }
 
             .socials {
                 @include flexCenter();
 
+                // styles anchor tags
                 a {
+                    // sets font size
                     font-size: 1.5rem;
+                    // sets color
                     color: #F1F2ED;
+                    // sets margins
                     margin: 0 0.4em;
+                    // sets display
                     display: inline-block;
+                    // sets a transition
                     transition: 0.5s;
 
                     &:hover {
@@ -225,19 +266,25 @@ footer {
             @include flexJustifyC();
             gap: 0.45em;
             flex-direction: column;
+            // sets a transition
             transition: all 0.3s;
 
             h6 {
                 @include headingStyle();
+                // sets font size
                 font-size: 1.14rem;
                 font-weight: 500;
                 text-decoration: underline;
             }
 
+            // styles anchor tags
             a {
+                // sets font size
                 font-size: 1rem;
                 font-weight: 400;
+                // sets color
                 color: #F1F2ED;
+                // sets display
                 display: inline-block;
                 opacity: 0.84;
 
@@ -245,6 +292,7 @@ footer {
                     opacity: 1;
                     font-style: italic;
                     font-weight: 500;
+                    // adds a text shadow
                     text-shadow: 0.3px 0.3px 1px $heading-color;
                 }
             }
@@ -252,11 +300,14 @@ footer {
     }
     
     #copyright {
+        // sets background color 
         background-color: $bg-dark;
+        // sets color
         color: $primary-color-white;
         padding: 0.6em 0.6em 0.45em;
         text-align: center;
         font-family: $heading-font;
+        // sets font size
         font-size: 0.9rem;
         font-weight: 400;
 
@@ -264,9 +315,12 @@ footer {
             font-weight: 400;
             font-style: italic;
             
+            // styles anchor tags
             a {
+                // sets color
                 color: $body-color;
                 opacity: 0.75;
+                // sets a transition
                 transition: all 0.3s ease;
                 
                 &:hover {
