@@ -1,25 +1,33 @@
 /* BASE STYLES */
 
+// styles everythinng
 * {
     padding: 0;
+    // sets margins
     margin: 0;
     box-sizing: border-box;
     // border: 1px solid black;
 }
 
+// styles the body
 body {
     margin: 0;
     padding: 0;
+    // sets width
     width: auto; 
+    // sets font size
     font-size: 1rem;
     font-family: $body-font;
+    // sets background color 
     background-color: $body-color;
+    // sets color
     color: $text-color;
     @include marginCenter();
     scroll-behavior: smooth;
     height: 100vh;
 }
 
+// style the anchor tags, list items, and buttons
 a, 
 li, 
 button {
@@ -27,12 +35,15 @@ button {
     outline: none;
     list-style: none;
     text-decoration: none;
+    // sets font size
     font-size: 1rem;
     font-family: $heading-font;
     font-weight: 500;
+    // sets color
     color: $text-color;
 }
 
+// logo
 .logo {
     @include logoStyle();
 }
