@@ -2,20 +2,27 @@
 @import "_mixins";
 @import "_base";
 
+// style wrapper
 .wrapper {
+    // styles section
     @include sectionStyle(); 
     padding: 1em 6%;
 
+    // styles navbar
     nav {
 
+        // logo
         .logo {
             @include logoStyle();
+            // sets color
             color: $heading-color;
         }
 
         .nav-item {
 
+            // styles anchor tags
             a {
+                // sets a transition
                 transition: 0.5s;
                 
                 &:hover {
@@ -23,6 +30,7 @@
                 }
             }
 
+            // targets active nav tab
             .active {
                 opacity: 1;
     
@@ -32,22 +40,27 @@
             }
         }
 
+        // styles nav icon
         .icon {
 
             i {
                 border-radius: 50%;
                 padding: 0.018em 0.24em 0em 0.24em;
+                // sets a transition
                 transition: all 0.24s ease-in-out;
                 cursor: pointer;
 
                 &:hover {
+                    // sets color
                     color: #F1F2ED;
+                    // sets background color 
                     background-color: $text-color;
                 }
             }
         }
     }
-
+    
+    // styles the header 
     #header {
 
         .faqs {
@@ -61,6 +74,7 @@
     
                 h5 {
                     @include headingStyle();
+                    // sets color
                     color: $heading-color;
                     font-weight: 500;
                 }
@@ -68,32 +82,41 @@
                 h1 {
                     margin-bottom: 0.45em;
                     @include headingStyle();
+                    // sets color
                     color: $heading-color;
                     font-weight: 500;
                 }
     
                 p {
                     margin-bottom: 1.5em;
+                    // sets font size
                     font-size: 1rem;
                 }
     
                 button {
                     @include btnStyleAlt();
+                    // sets width
                     width: fit-content;
                     box-shadow: 0 0 1px #424242;
+                    // sets font size
                     font-size: 1.14rem;
+                    // sets a transition
                     transition: all 0.3s ease;
 
-                    
+                    // styles anchor tags
                     a {
+                        // sets color
                         color: $text-color; 
                     }
 
                     &:hover {
                         box-shadow: 0 0 2px #363636;
+                        // sets background color 
                         background-color: $text-color;
                         
+                        // styles anchor tags
                         a {
+                            // sets color
                             color: #F1F2ED;
                             font-style: italic;
                         }
@@ -104,13 +127,16 @@
             .header-image {
             
                 img {
+                    // sets width
                     width: 100%;
                     height: 100%;
+                    // positions image to the bottom of the container
                     background-position: bottom;
                     aspect-ratio: 3 / 2;
                     object-fit: cover;
                     border-radius: 1.2rem;
                     box-shadow: 0.75rem 0.75rem 0 $primary-color;
+                    // sets a transition
                     transition: all 0.3s ease;
 
                     &:hover {
@@ -137,18 +163,24 @@
         padding-top: 1em;
 
         .accordion-button:first-of-type:not(.collapsed) {
+            // sets background color 
             background-color: #36853C;
+            // sets color
             color: #F1F2ED;
         }
 
         .accordion-button:active {
+            // sets background color 
             background-color: #36853C;
+            // sets color
             color: #F1F2ED;
             box-shadow: none;
         }
 
         .accordion-button:focus {
+            // sets background color 
             background-color: #36853C;
+            // sets color
             color: #F1F2ED;
             box-shadow: 0 0 2px $primary-color-light;
             border: 2.4px solid $primary-color-light;
@@ -159,34 +191,45 @@
 // BACK-TO-TOP BTN
 #top-btn {
     #back-to-top {
-        display: none; /* Hidden by default */
+        // sets display
+        display: none;
         position: fixed; /* Fixed/sticky position */
         bottom: 1.5em; /* Place the button at the bottom of the page */
         right: 1.5em; /* Place the button 30px from the right */
         z-index: 99; /* Make sure it does not overlap */
         border: none; /* Remove borders */
         outline: none; /* Remove out ne */
-        background-color: #2a982a; /* Set a background color */
-        color: white; /* Text color */
+        // sets background color 
+        background-color: #2a982a; 
+        // sets color
+        color: white; 
         cursor: pointer; /* Add a mouse pointer on hover */
         padding: 0.6em 1em; /* Some padding */
         border-radius: 50%; /* Rounded corners */
+        // sets a transition
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: $primary-color-white; /* Add a dark-grey background on hover */
+          // sets background color 
+          background-color: $primary-color-white;
+          // sets color
           color: $text-color;
         }
     }
 }
 
+// styles footer
 footer {
+    // sets background color 
     background-color: $primary-color;
+    // sets width
     width: 100%;
+    // sets margins
     margin: 0;
     
     .footer-container {
         padding: 2.4em 10%;
+        // sets display to flex, aligns content to center, and justifies content to space between
         @include flexJustifySB();
 
         .col-1 {
@@ -194,19 +237,28 @@ footer {
             gap: 1.2em;
             flex-direction: column;
 
+             // logo
             .logo {
+                // adds a text shadow
                 text-shadow: 1px 1px 1px $heading-color;
+                // sets color
                 color: $body-color;
             }
 
             .socials {
                 @include flexCenter();
 
+                // styles anchor tags
                 a {
+                    // sets font size
                     font-size: 1.5rem;
+                    // sets color
                     color: #F1F2ED;
+                    // sets margins
                     margin: 0 0.4em;
+                    // sets display
                     display: inline-block;
+                    // sets a transition
                     transition: 0.5s;
 
                     &:hover {
@@ -220,19 +272,25 @@ footer {
             @include flexJustifyC();
             gap: 0.45em;
             flex-direction: column;
+            // sets a transition
             transition: all 0.3s;
 
             h6 {
                 @include headingStyle();
+                // sets font size
                 font-size: 1.14rem;
                 font-weight: 500;
                 text-decoration: underline;
             }
 
+            // styles anchor tags
             a {
+                // sets font size
                 font-size: 1rem;
                 font-weight: 400;
+                // sets color
                 color: #F1F2ED;
+                // sets display
                 display: inline-block;
                 opacity: 0.84;
 
@@ -240,6 +298,7 @@ footer {
                     opacity: 1;
                     font-style: italic;
                     font-weight: 500;
+                    // adds a text shadow
                     text-shadow: 0.3px 0.3px 1px $heading-color;
                 }
             }
@@ -247,11 +306,14 @@ footer {
     }
     
     #copyright {
+        // sets background color 
         background-color: $bg-dark;
+        // sets color
         color: $primary-color-white;
         padding: 0.6em 0.6em 0.45em;
         text-align: center;
         font-family: $heading-font;
+        // sets font size
         font-size: 0.9rem;
         font-weight: 400;
 
@@ -259,9 +321,12 @@ footer {
             font-weight: 400;
             font-style: italic;
             
+            // styles anchor tags
             a {
+                // sets color
                 color: $body-color;
                 opacity: 0.75;
+                // sets a transition
                 transition: all 0.3s ease;
                 
                 &:hover {
