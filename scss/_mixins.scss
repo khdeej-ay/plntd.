@@ -7,6 +7,7 @@
 
 @mixin logoStyle() {
     font-family: $logo-font;
+    // sets font size
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -14,20 +15,25 @@
 @mixin headingStyle() {
     font-family: $heading-font;
     font-weight: 600;
+    // sets color
     color: $body-color;
 }
 
 @mixin iconStyle() {
+    // sets color
     color: $body-color;
+    // sets font size
     font-size: 1.5rem;
 }
 
 @mixin btnStyle() {
+    // sets color
     color: $body-color; 
     border: 1.5px solid $body-color;
     padding: 0.3em 0.7em 0.36em;
     text-transform: uppercase;
     letter-spacing: 2.1px;
+    // sets a transition
     transition: all 0.4s ease 0s;
 
     &:hover {
@@ -37,11 +43,13 @@
 }
 
 @mixin btnStyleAlt() {
+    // sets color
     color: $text-color; 
     border: 1.5px solid $text-color;
     padding: 0.3em 0.7em 0.36em;
     text-transform: uppercase;
     letter-spacing: 2.1px;
+    // sets a transition
     transition: all 0.4s ease 0s;
 
     &:hover {
@@ -56,18 +64,21 @@
 }
 
 @mixin flexCenter {
+    // sets display
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 @mixin flexJustifySB {
+    // sets display
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 @mixin flexJustifyC {
+    // sets display
     display: flex;
     justify-content: center;
 }
