@@ -2,21 +2,27 @@
 @import "_mixins";
 @import "_base";
 
+// style wrapper
 .wrapper {
+    // styles section
     @include sectionStyle(); 
     padding: 1em 6%;
 
+    // styles navbar
     nav {
 
+        // logo
         .logo {
             @include logoStyle();
+            // sets color
             color: $heading-color;
         }
 
         .nav-item {
-
+            // styles anchor tags
             a {
                 opacity: 0.6;
+                // sets a transition
                 transition: 0.5s;
                 
                 &:hover {
@@ -24,6 +30,7 @@
                 }
             }
 
+            // targets active nav tab
             .active {
                 opacity: 1;
     
@@ -33,60 +40,71 @@
             }
         }
 
+        // styles nav icon
         .icon {
 
             i {
                 border-radius: 50%;
                 padding: 0.018em 0.24em 0em 0.24em;
+                // sets a transition
                 transition: all 0.24s ease-in-out;
                 cursor: pointer;
 
                 &:hover {
+                    // sets color
                     color: #F1F2ED;
+                    // sets background color 
                     background-color: $text-color;
                 }
             }
         }
     }
 
+    // styles the header 
     #header {
-        // @include flexJustifySB();
 
         .text-content {
-            // flex: 1; 
             @include flexJustifyC();
             flex-direction: column;
-            // margin-right: 2.4em;
 
             h1 {
                 margin-bottom: 0.45em;
                 @include headingStyle();
+                // sets color
                 color: $heading-color;
                 font-weight: 500;
             }
 
             p {
                 margin-bottom: 1.5em;
+                // sets font size
                 font-size: 1rem;
             }
 
             button {
                 @include btnStyleAlt();
+                // sets width
                 width: fit-content;
                 box-shadow: 0 0 1px #424242;
+                // sets font size
                 font-size: 1.14rem;
+                // sets a transition
                 transition: all 0.3s ease;
 
-                
+                // styles anchor tags
                 a {
+                    // sets color
                     color: $text-color; 
                 }
 
                 &:hover {
                     box-shadow: 0 0 2px #363636;
+                    // sets background color 
                     background-color: $text-color;
                     
+                    // styles anchor tags
                     a {
+                        // sets color
                         color: #F1F2ED;
                         font-style: italic;
                     }
@@ -97,14 +115,17 @@
         .header-image {
             
             img {
+                // sets width
                 width: 100%;
                 height: 100%;
+                // positions image to the bottom of the container
                 background-position: bottom;
                 aspect-ratio: 3 / 2;
                 object-fit: cover;
                 border-radius: 1.2rem;
                 border: 0.06px solid $primary-color;
                 box-shadow: 0.75rem 0.75rem 0 $primary-color;
+                // sets a transition
                 transition: all 0.3s ease;
 
                 &:hover {
@@ -117,6 +138,7 @@
 }
 
 #video {
+    // styles section
     @include sectionStyle();
     @include flexCenter();
 
@@ -127,6 +149,7 @@
         
         /* targets the video tag */
         video {
+            // sets width
             max-width: 72vw;
             aspect-ratio: 16 / 9;
             object-fit: cover;
@@ -141,12 +164,15 @@
         h2 {
             font-family: $heading-font;
             @include headingStyle();
+            // sets color
             color: $heading-color;
         }
     }
 
     h3 {
+        // sets color
         color: #262626;
+        // sets font size
         font-size: 17px;
         line-height: 24px;
         font-weight: 700;
@@ -154,26 +180,32 @@
     }
       
     p {
+        // sets font size
         font-size: 17px;
         font-weight: 400;
         line-height: 20px;
+        // sets color
         color: #666666;
       
         &.small {
+          // sets font size
           font-size: 14px;
         }
     }
       
     .go-corner {
+        // sets display
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
+        // sets width
         width: 32px;
         height: 32px;
         overflow: hidden;
         top: 0;
         right: 0;
+        // sets background color 
         background-color: $primary-color;
         border-radius: 0 4px 0 32px;
     }
@@ -181,17 +213,22 @@
     .go-arrow {
         margin-top: -4px;
         margin-right: -4px;
+        // sets color
         color: white;
         font-family: courier, sans;
     }
       
     .info-card {
+        // sets display
         display: block;
         position: relative;
+        // sets width
         max-width: 262px;
+        // sets background color 
         background-color: #f2f8f9;
         border-radius: 0.5em;
         padding: 1.65rem 1.5rem 0.72rem 1.65rem;
+        // sets margins
         margin: 12px;
         text-decoration: none;
         z-index: 0;
@@ -206,10 +243,12 @@
           right: -16px;
           background: $primary-color;
           height: 32px;
+          // sets width
           width: 32px;
           border-radius: 32px;
           transform: scale(1);
           transform-origin: 50% 50%;
+          // sets a transition
           transition: transform 0.45s ease-out;
         }
       
@@ -220,11 +259,15 @@
       
     .info-card:hover {
         p {
+            // sets a transition
           transition: all 0.45s ease-out;
+          // sets color
           color: rgba(255, 255, 255, 0.8);
         }
         h3 {
+            // sets a transition
           transition: all 0.45s ease-out;
+          // sets color
           color: #ffffff;
         }
     }
@@ -233,34 +276,45 @@
 // BACK-TO-TOP BTN
 #top-btn {
     #back-to-top {
-        display: none; /* Hidden by default */
+        // sets display
+        display: none; 
         position: fixed; /* Fixed/sticky position */
         bottom: 1.5em; /* Place the button at the bottom of the page */
         right: 1.5em; /* Place the button 30px from the right */
         z-index: 99; /* Make sure it does not overlap */
         border: none; /* Remove borders */
         outline: none; /* Remove out ne */
-        background-color: #2a982a; /* Set a background color */
-        color: white; /* Text color */
+        // sets background color 
+        background-color: #2a982a; 
+        // sets color
+        color: white;
         cursor: pointer; /* Add a mouse pointer on hover */
         padding: 0.6em 1em; /* Some padding */
         border-radius: 50%; /* Rounded corners */
+        // sets a transition
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: $primary-color-white; /* Add a dark-grey background on hover */
+        // sets background color 
+          background-color: $primary-color-white; 
+          // sets color
           color: $text-color;
         }
     }
 }
 
+// styles footer
 footer {
+    // sets background color 
     background-color: $primary-color;
+    // sets width
     width: 100%;
+    // sets margins
     margin: 0;
     
     .footer-container {
         padding: 2.4em 10%;
+        // sets display to flex, aligns content to center, and justifies content to space between
         @include flexJustifySB();
 
         .col-1 {
@@ -268,19 +322,28 @@ footer {
             gap: 1.2em;
             flex-direction: column;
 
+            // logo
             .logo {
+                // adds a text shadow
                 text-shadow: 1px 1px 1px $heading-color;
+                // sets color
                 color: $body-color;
             }
 
             .socials {
                 @include flexCenter();
 
+                // styles anchor tags
                 a {
+                    // sets font size
                     font-size: 1.5rem;
+                    // sets color
                     color: #F1F2ED;
+                    // sets margins
                     margin: 0 0.4em;
+                    // sets display
                     display: inline-block;
+                    // sets a transition
                     transition: 0.5s;
 
                     &:hover {
@@ -294,19 +357,25 @@ footer {
             @include flexJustifyC();
             gap: 0.45em;
             flex-direction: column;
+            // sets a transition
             transition: all 0.3s;
 
             h6 {
                 @include headingStyle();
+                // sets font size
                 font-size: 1.14rem;
                 font-weight: 500;
                 text-decoration: underline;
             }
 
+            // styles anchor tags
             a {
+                // sets font size
                 font-size: 1rem;
                 font-weight: 400;
+                // sets color
                 color: #F1F2ED;
+                // sets display
                 display: inline-block;
                 opacity: 0.84;
 
@@ -314,6 +383,7 @@ footer {
                     opacity: 1;
                     font-style: italic;
                     font-weight: 500;
+                    // adds a text shadow
                     text-shadow: 0.3px 0.3px 1px $heading-color;
                 }
             }
@@ -321,11 +391,14 @@ footer {
     }
     
     #copyright {
+        // sets background color 
         background-color: $bg-dark;
+        // sets color
         color: $primary-color-white;
         padding: 0.6em 0.6em 0.45em;
         text-align: center;
         font-family: $heading-font;
+        // sets font size
         font-size: 0.9rem;
         font-weight: 400;
 
@@ -333,9 +406,12 @@ footer {
             font-weight: 400;
             font-style: italic;
             
+            // styles anchor tags
             a {
+                // sets color
                 color: $body-color;
                 opacity: 0.75;
+                // sets a transition
                 transition: all 0.3s ease;
                 
                 &:hover {
