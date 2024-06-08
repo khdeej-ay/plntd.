@@ -1,30 +1,54 @@
+// import variable file
 @import "_variables";
+// import mixins file
 @import "_mixins";
+// import base file (contains basic styles)
 @import "_base";
 
+// style wrapper
 .wrapper {
+    // styles section
     @include sectionStyle();
+    // sets background color 
+    background-color: $primary-color;
+    // adds a background image
     background-image: url("../assets/images/bg.jpg");
-    background-size: cover;                      
+    // image covers container (without losing quality)
+    background-size: cover;        
+    // prevents background from repreating
     background-repeat: no-repeat;
+    // positions image to the center of the container
     background-position: center center;
 
+    // styles the header 
     header {
 
+        // logo
         .logo {
+            // adds a text shadow
             text-shadow: 0.6px 0.6px 2.4px $heading-color, -0.6px -0.6px 2.4px $heading-color;
+            // sets color
             color: $body-color;
         }
 
+        // styles nav links
         .nav-links {
+            // sets display to flex, aligns content to center, and justifies content to space between
             @include flexJustifySB();
+            // sets width
             width: 40vw;
             
+            // styles anchor tags
             a {
+                // sets font size
                 font-size: 1.08rem;
+                // sets color
                 color: #F1F2ED;
+                // sets margins
                 margin: 0 0.4em;
+                // sets display
                 display: inline-block;
+                // sets a transition
                 transition: 0.5s;
                 
                 &:hover {
@@ -32,8 +56,10 @@
                 }
             }
 
+            // targets active nav tab
             .active {
                 opacity: 1;
+                // adds a text shadow
                 text-shadow: 0.6px 0.6px 2.4px $heading-color, -0.6px -0.6px 2.4px $heading-color;
 
                 &:hover {
@@ -42,12 +68,14 @@
             }
         }
 
+        // styles nav icon
         .icon {
             @include iconStyle();
             padding: 0em 0em 0em 3em;
         }
     }
 
+    // styles hero section
     #hero {
         padding: 1.5em 6%;
 
@@ -73,9 +101,12 @@
             .cta-btn {
                 @include btnStyle();
                 margin-top: 0.15em;
+                // sets a transition
                 transition: all 0.3s ease;
+                // sets font size
                 font-size: 1.14rem;
 
+                // styles anchor tags
                 a {
                     color: $body-color;
                 }
@@ -83,6 +114,7 @@
                 &:hover {
                     border: 1.5px solid $body-color;
                     
+                    // styles anchor tags
                     a {
                         font-style: italic;
                     }
@@ -92,8 +124,11 @@
     }
 }
 
+// styles categories section
 #categories {
+    // styles section
     @include sectionStyle();
+    // sets background color 
     background-color: #F1F2ED;
 
     .container {
@@ -104,7 +139,9 @@
         gap: 0.5em;
         
         .explore {
+            // sets width
             width: 100%;
+            // sets display to flex, aligns content to center, and justifies content to space between
             @include flexJustifySB();
 
             h2 {
@@ -115,8 +152,10 @@
 
             .shop-btn {
                 @include btnStyleAlt();
+                // sets a transition
                 transition: all 0.3s ease;
 
+                // styles anchor tags
                 a {
                     color: $text-color;
                 }
@@ -124,6 +163,7 @@
                 &:hover {
                     border: 1.5px solid $text-color;
 
+                    // styles anchor tags
                     a {
                         font-style: italic;
                     }
@@ -159,9 +199,10 @@
     }
 }
 
+// styles parallax image
 #before-parallax {
 
-    /* The image used */
+    // adds a background image
     background-image: url("../assets/images/before-parallax.jpg");
     
     /* Set a specific height */
@@ -169,22 +210,30 @@
     
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
+    // positions image to the center of the container
     background-position: center;
+    // prevents background from repreating
     background-repeat: no-repeat;
+    // image covers container (without losing quality)
     background-size: cover;
 }
 
+// styles about section
 #about {
+    // styles section
     @include sectionStyle();
     height: 120vh;
+    // sets background color 
     background-color: #F1F2ED;
 
     .container {
         height: 100%;
+        // sets display to flex, aligns content to center, and justifies content to space between
         @include flexJustifySB();
         padding: 3em;
 
         .image {
+            // sets width
             width: 45%;
             height: 99vh;
 
@@ -192,16 +241,21 @@
                 height: 100%;
                 inline-size: 100%; 
                 object-fit: cover;
-                background-position: bottom;
+                // positions image to the bottom of the container
+                ;
+                // prevents background from repreating
                 background-repeat: no-repeat;
+                // image covers container (without losing quality)
                 background-size: cover;
             }
         }
 
         .gardening-info {
+            // sets width
             width: 100%;
             flex: 1;
             gap: 3em;
+            // sets margins
             margin: 0em 0em 0em 5%;
 
             h2 {
@@ -223,6 +277,7 @@
 
             .learn-more {
                 @include btnStyleAlt();
+                // sets width
                 width: fit-content;
 
                 .learn {
@@ -232,6 +287,7 @@
                 &:hover {
                     border: 1.5px solid $text-color;
 
+                    // styles anchor tags
                     a {
                         font-style: italic;
                     }
@@ -241,9 +297,10 @@
     }
 }
 
+// styles parallax image
 #after-parallax {
 
-    /* The image used */
+    // adds a background image
     background-image: url("../assets/images/after-parallax.jpg");
     
     /* Set a specific height */
@@ -252,11 +309,15 @@
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
+    // prevents background from repreating
     background-repeat: no-repeat;
+    // image covers container (without losing quality)
     background-size: cover;
 }
 
+// styles newsletter section
 #newsletter {
+    // sets display to flex, aligns content to center, and justifies content to space between
     @include flexJustifySB();
     padding: 3em 6%;
 
@@ -276,6 +337,7 @@
 
     .submit-email {
         flex: 1;
+        // sets width
         width: 100%;
         @include flexJustifyC();
         align-items: start;
@@ -283,6 +345,7 @@
         gap: 0.5em;
 
         .email {
+            // sets width
             width: 100%;
 
             .form-control {
@@ -300,37 +363,46 @@
     }
 }
 
-// BACK-TO-TOP BTN
+// styles BACK-TO-TOP Button
 #top-btn {
     #back-to-top {
-        display: none; /* Hidden by default */
+        // sets display
+        display: none; 
         position: fixed; /* Fixed/sticky position */
         bottom: 1.5em; /* Place the button at the bottom of the page */
         right: 1.5em; /* Place the button 30px from the right */
         z-index: 99; /* Make sure it does not overlap */
         border: none; /* Remove borders */
         outline: none; /* Remove out ne */
-        background-color: #2a982a; /* Set a background color */
+        // sets background color 
+        background-color: #2a982a; 
         color: white; /* Text color */
         cursor: pointer; /* Add a mouse pointer on hover */
         padding: 0.6em 1em; /* Some padding */
         border-radius: 50%; /* Rounded corners */
+        // sets a transition
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: $primary-color-white; /* Add a dark-grey background on hover */
-          color: $text-color;
+            // sets background color 
+            background-color: $primary-color-white; /* Add a dark-grey background on hover */
+            color: $text-color;
         }
     }
 }
 
+// styles footer
 footer {
+    // sets background color 
     background-color: $primary-color;
+    // sets width
     width: 100%;
+    // sets margins
     margin: 0;
     
     .footer-container {
         padding: 2.4em 10%;
+        // sets display to flex, aligns content to center, and justifies content to space between
         @include flexJustifySB();
 
         .col-1 {
@@ -339,6 +411,7 @@ footer {
             flex-direction: column;
 
             .logo {
+                // adds a text shadow
                 text-shadow: 1px 1px 1px $heading-color;
                 color: $body-color;
             }
@@ -346,11 +419,16 @@ footer {
             .socials {
                 @include flexCenter();
 
+                // styles anchor tags
                 a {
+                    // sets font size
                     font-size: 1.5rem;
                     color: #F1F2ED;
+                    // sets margins
                     margin: 0 0.4em;
+                    // sets display
                     display: inline-block;
+                    // sets a transition
                     transition: 0.5s;
 
                     &:hover {
@@ -364,19 +442,24 @@ footer {
             @include flexJustifyC();
             gap: 0.45em;
             flex-direction: column;
+            // sets a transition
             transition: all 0.3s;
 
             h6 {
                 @include headingStyle();
+                // sets font size
                 font-size: 1.14rem;
                 font-weight: 500;
                 text-decoration: underline;
             }
 
+            // styles anchor tags
             a {
+                // sets font size
                 font-size: 1rem;
                 font-weight: 400;
                 color: #F1F2ED;
+                // sets display
                 display: inline-block;
                 opacity: 0.84;
 
@@ -384,6 +467,7 @@ footer {
                     opacity: 1;
                     font-style: italic;
                     font-weight: 500;
+                    // adds a text shadow
                     text-shadow: 0.3px 0.3px 1px $heading-color;
                 }
             }
@@ -391,11 +475,13 @@ footer {
     }
     
     #copyright {
+        // sets background color 
         background-color: $bg-dark;
         color: $primary-color-white;
         padding: 0.6em 0.6em 0.45em;
         text-align: center;
         font-family: $heading-font;
+        // sets font size
         font-size: 0.9rem;
         font-weight: 400;
 
@@ -403,9 +489,11 @@ footer {
             font-weight: 400;
             font-style: italic;
             
+            // styles anchor tags
             a {
                 color: $body-color;
                 opacity: 0.75;
+                // sets a transition
                 transition: all 0.3s ease;
                 
                 &:hover {
