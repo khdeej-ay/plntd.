@@ -43,7 +43,7 @@ button {
 .wrapper {
   min-height: 100vh;
   padding: 1.5em 6%;
-  background-image: url("../assets/images/bg.jpg");
+  background-image: url("../media/images/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -203,7 +203,7 @@ button {
 
 #before-parallax {
   /* The image used */
-  background-image: url("../assets/images/before-parallax.jpg");
+  background-image: url("../media/images/before-parallax.jpg");
   /* Set a specific height */
   min-height: 80vh;
   /* Create the parallax scrolling effect */
@@ -289,7 +289,7 @@ button {
 
 #after-parallax {
   /* The image used */
-  background-image: url("../assets/images/after-parallax.jpg");
+  background-image: url("../media/images/after-parallax.jpg");
   /* Set a specific height */
   min-height: 84vh;
   /* Create the parallax scrolling effect */
