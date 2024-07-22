@@ -12,7 +12,7 @@
     // sets background color 
     background-color: $primary-color;
     // adds a background image
-    background-image: url("../assets/images/bg.jpg");
+    background-image: url("../media/images/bg.jpg");
     // image covers container (without losing quality)
     background-size: cover;        
     // prevents background from repreating
@@ -203,7 +203,7 @@
 #before-parallax {
 
     // adds a background image
-    background-image: url("../assets/images/before-parallax.jpg");
+    background-image: url("../media/images/before-parallax.jpg");
     
     /* Set a specific height */
     min-height: 80vh; 
@@ -301,7 +301,7 @@
 #after-parallax {
 
     // adds a background image
-    background-image: url("../assets/images/after-parallax.jpg");
+    background-image: url("../media/images/after-parallax.jpg");
     
     /* Set a specific height */
     min-height: 84vh; 
